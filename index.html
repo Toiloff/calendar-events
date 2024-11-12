@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Календарь</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/widget.css" />
+    <link rel="stylesheet" href="styles/calendar.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="styles/toast.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="page-bg"></div>
+      <main class="container">
+        <div class="calendar">
+          <aside class="calendar-panel">
+            <div class="calendar-panel__actions">
+              <button
+                class="button button_large button_primary calendar-panel__actions-create"
+              >
+                Создать событие
+              </button>
+            </div>
+            <div class="calendar-widget__container"></div>
+            <div class="calendar-panel__filters"></div>
+          </aside>
+          <section class="calendar-details"></section>
+        </div>
+      </main>
+    </div>
+    <script src="scripts/index.js" type="module"></script>
+  </body>
+</html>

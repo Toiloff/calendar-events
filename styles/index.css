@@ -1,0 +1,156 @@
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Open Sans",
+    "Helvetica Neue", sans-serif;
+  --background-color: rgb(30, 30, 30);
+  --background-color-2: rgb(39, 39, 42);
+  --primary-color: rgb(34, 142, 93);
+  --primary-hover-color: rgb(0, 186, 120);
+  --primary-disabled-color: rgba(34, 142, 93, 0.3);
+  --success-color: 76, 175, 80;
+  --warning-color: 221, 168, 11;
+  --error-color: 150, 68, 72;
+  --error-color-hover: 241, 56, 56;
+  --text-color: rgb(247, 247, 255);
+  --desc-color: rgba(255, 255, 255, 0.75);
+  --link-color: rgba(190, 190, 194);
+  --button-color: rgb(45, 45, 45);
+  --border-color: rgb(48, 48, 49);
+  --border-color-hover: rgb(57, 57, 59);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--background-color);
+  font-family: var(--font-family);
+  font-size: 16px;
+  scrollbar-color: hsla(0, 0%, 100%, 0.1) #252525;
+}
+
+input,
+button,
+select {
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+input,
+select {
+  background-color: var(--background-color-2);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  outline: 2px solid transparent;
+  transition: outline-color 0.25s ease;
+}
+
+input:focus,
+select:focus {
+  outline-color: var(--primary-color);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  outline: none;
+  transition: none;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline-color: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  height: 100svh;
+  margin: 0 auto;
+}
+
+.page-bg {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  background-image: url("../images/backgrounds/mountains-lake.jpg");
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.page-bg:before {
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+  gap: 0.5rem;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  background: var(--button-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.8s ease;
+}
+
+.button:hover {
+  background: var(--primary-hover-color);
+}
+
+.button.button_primary {
+  background: var(--primary-color);
+}
+
+.button[disabled] {
+  background: var(--primary-disabled-color);
+  cursor: default;
+}
+
+.button.button_large {
+  padding: 0.5rem 2rem;
+}
+
+.button.button_danger {
+  background: rgba(var(--error-color), 0.25);
+}
+
+.button.button_danger:hover {
+  background: rgba(var(--error-color-hover), 0.25);
+}
+
+.button.button_icon {
+  padding: 0;
+  background: transparent;
+  transition: color 0.5s ease;
+}
+
+.button.button_icon:hover {
+  background: transparent;
+}

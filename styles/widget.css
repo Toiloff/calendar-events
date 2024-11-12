@@ -1,0 +1,103 @@
+:root {
+  --calendar-hover-background: var(--background-color-2);
+  --calendar-cell-selected: rgb(51, 51, 54);
+  --calendar-cell-outside: rgba(255, 255, 255, 0.6);
+  --calendar-cell-weekend: rgba(255, 255, 255, 0.75);
+  --calendar-weekday: rgba(255, 255, 255, 0.6);
+}
+
+/* HEADER */
+.calendar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+.calendar-navigation__action {
+  display: flex;
+  padding: 0.5rem;
+  background: transparent;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.calendar-navigation__title {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  height: 2.25rem;
+  font-size: 600;
+  cursor: default;
+}
+
+.calendar-navigation__action:hover {
+  /* .calendar-navigation__title:hover { */
+  background: var(--calendar-hover-background);
+}
+
+.calendar-weekday {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  color: var(--calendar-weekday);
+}
+
+/* BODY */
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 0.85rem;
+  gap: 0.25rem 0.5rem;
+  padding: 0.5rem;
+}
+
+.calendar-cell {
+  cursor: pointer;
+  text-align: center;
+  padding: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.calendar-cell:hover {
+  background: var(--calendar-hover-background);
+}
+
+.calendar-cell.calendar-cell_outside {
+  color: var(--calendar-cell-outside) !important;
+}
+
+.calendar-cell.calendar-cell_weekend {
+  color: var(--calendar-cell-weekend);
+}
+
+.calendar-cell.calendar-cell_selected {
+  background: var(--calendar-cell-selected);
+}
+
+.calendar-cell.calendar-cell_today {
+  background: var(--primary-color);
+}
